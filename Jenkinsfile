@@ -3,13 +3,13 @@ pipeline {
 
     stages {
         stage("Compile") {
-            steps { bat "./gradlew compilejava" }
+            steps { sh "./gradlew compilejava" }
         }
         stage("Build") {
-            steps { bat "./gradlew build" }
+            steps { sh "./gradlew build" }
         }
         stage("Unit test") {
-            steps { bat "./gradlew test" }
+            steps { sh "./gradlew test" }
         }
     }
 }
